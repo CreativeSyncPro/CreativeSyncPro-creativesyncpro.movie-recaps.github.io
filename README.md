@@ -1,1 +1,1 @@
-# CreativeSyncPro-creativesyncpro.movie-recaps.github.io
+# CreativeSyncPro.movie-recaps.github.io
