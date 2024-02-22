@@ -1,0 +1,31 @@
+.top-container {
+	border: 1px solid red;
+	height: 300px;
+/*	display: inline-block;*/
+
+}
+
+.top-container-block {
+
+	display: inline-block;
+	justify-content: space-between;
+}
+
+.logo {
+	border: 1px solid blue;
+	width:150px;
+	height: 150px;
+	
+}
+
+.top-container-block > .slideshow {
+	margin-left: 100px;*/
+	margin-top:  50px;
+/*	border: 1px solid blue;*/
+	width: 1000px;
+	height: 250px;
+	/*display: inline-grid;
+	gap: 100px;*/
+/*	justify-content: center;*/
+
+}
