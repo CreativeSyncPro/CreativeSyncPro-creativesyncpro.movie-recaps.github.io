@@ -78,7 +78,7 @@ body {
 /* Hide the images by default */
 .Slides {
     position: relative;
-    display: flex;
+    display: block;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -86,11 +86,11 @@ body {
     .Slides > img {
        max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-/*      display: block;*/
-/*    margin: auto; /* This centers the image horizontally */*/
+  /*  width: auto;
+    height: auto;*/
+    object-fit: scale-down;
+     display: flow;
+    margin: auto; /* This centers the image horizontally */*/
     }
 
 /* Next & previous buttons */
@@ -148,7 +148,7 @@ body {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 
@@ -182,7 +182,8 @@ body {
  **********************************************************************/
 .middle-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 325px); /* Set column width to 250px */
+/*    margin-right: 20px;*/
+    grid-template-columns: repeat(auto-fill, 320px); /* Set column width to 250px */
     grid-auto-rows: 180px; /* Set row height to 150px */
     grid-gap: 15px;
     background: #DDDDDD;
@@ -192,6 +193,9 @@ body {
     background-color: #444;
     padding: 0px;
     margin: 10px;
+    margin-top: 15px;
+   /* margin-left: 25px;
+    margin-right: 5px;*/
     display: flex; /* Add this to enable flexbox */
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
@@ -246,7 +250,7 @@ body {
     }
 
      /* Responsive styling */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
         .logo, .slideshow {
             margin-left: 0;
             width: 100%;
