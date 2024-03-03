@@ -1,31 +1,308 @@
+body {
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.zone {
+    /*padding:30px 50px;*/
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
 .top-container {
-	border: 1px solid red;
-	height: 300px;
-/*	display: inline-block;*/
+        height: 370px;
+        width: 100%;
+        background-color: white;
+        position: relative;
+    }
 
-}
+   /* .middle-container {
+        background-color: skyblue;
+         height: 800px;
+        clear: both;
+    }
+*/
+  /*  .bottom-container {
+        height: 300px;
+        background-color: white;
+    }*/
 
-.top-container-block {
+    .footer {
+        height: 50px;
+        background-color: grey;
+    }
 
-	display: inline-block;
-	justify-content: space-between;
-}
-
+/* Logo Styles */
 .logo {
-	border: 1px solid blue;
-	width:150px;
-	height: 150px;
-	
+    max-width: 200px; /* Set a maximum width in pixels */
+    width: 20%; /* Set a width as a percentage of the viewport width */
+    height: auto; /* Allow the height to adjust accordingly */
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }
 
-.top-container-block > .slideshow {
-	margin-left: 100px;*/
-	margin-top:  50px;
-/*	border: 1px solid blue;*/
-	width: 1000px;
-	height: 250px;
-	/*display: inline-grid;
-	gap: 100px;*/
-/*	justify-content: center;*/
-
+.logo > img {
+    max-width: 100%;
+    height: auto;
 }
+
+/* Slideshow Styles */
+.slideshow {
+    position: relative;
+    height: 350px;
+    width: calc(80% - 20px); /* Adjust width as needed */
+    max-width: 600px; /* Set a maximum width */
+    margin: 0 auto; /* Center the slideshow */
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* Hide the images by default */
+.Slides {
+    position: relative;
+    display: fl;
+    transition: transform 0.5s ease-in-out;
+}
+
+ /* Style the images */
+    .Slides > img {
+       max-width: 100%;
+    max-height: 100%;
+  /*  width: auto;
+    height: auto;*/
+    object-fit: cover;
+     display: block;
+    margin: auto; /* This centers the image horizontally */*/
+    }
+
+/* Next & previous buttons */
+.prev, .next {
+
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22px;
+  padding: 10px;
+  color: white;
+   background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.Slides .next a{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.slide {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1090px) {
+    .logo {
+        width: 15%; /* Reduce width of logo container */
+    }
+
+    .slideshow {
+        width: calc(85% - 20px); /* Adjust width of slideshow container */
+    }
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 800px) {
+    .top-container {
+        height: auto; /* Allow the top container to adjust its height */
+    }
+
+    .logo {
+        position: static; /* Reset position of logo container */
+        width: 10%; /* Make logo container full width */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .slideshow {
+        width: 100%; /* Make slideshow container full width */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+/* Middle Container Styles */
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+.middle-container {
+    display: grid;
+/*    margin-right: 20px;*/
+    grid-template-columns: repeat(auto-fill, 320px); /* Set column width to 250px */
+    grid-auto-rows: 180px; /* Set row height to 150px */
+    grid-gap: 15px;
+    background: #DDDDDD;
+}
+
+.box {
+    background-color: #444;
+    padding: 0px;
+    margin: 10px;
+    margin-top: 15px;
+   /* margin-left: 25px;
+    margin-right: 5px;*/
+    display: flex; /* Add this to enable flexbox */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
+
+.box > a {
+    display: block;
+    width: 100%; /* Ensure the anchor tag fills the entire box */
+    height: 100%; /* Ensure the anchor tag fills the entire box */
+}
+
+.box > a > img {
+    width: 100%; /* Ensure the image fills the entire anchor tag */
+    height: 100%; /* Ensure the image fills the entire anchor tag */
+    object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+.box > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*/* Media query for smaller screens */
+@media only screen and (max-width: 800px) {
+    .middle-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+    /* Clearfix to prevent collapsing margins */
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+
+
+
+
+
+
+/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
+/***********************************************************************
+ *  Green Background
+ **********************************************************************/
