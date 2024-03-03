@@ -203,7 +203,24 @@ body {
     }
 }
 
+@media only screen and (max-width: 650px) {
+    .top-container {
+        height: auto; /* Allow the top container to adjust its height */
+    }
 
+    .logo {
+        position: static; /* Reset position of logo container */
+        width: 10%; /* Make logo container full width */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .slideshow {
+        width: 75%; /* Make slideshow container full width */
+        max-width: none;
+        height: 340px;
+/*        height: auto; /* Remove maximum width */*/
+    }
+}
 
 /***********************************************************************
  *  Grid Panel
