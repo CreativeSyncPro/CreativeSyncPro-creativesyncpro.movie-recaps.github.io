@@ -80,7 +80,7 @@ body {
 /* Hide the images by default */
 .Slides {
     position: relative;
-    display: fl;
+/*    display: none;*/
     transition: transform 0.5s ease-in-out;
      flex: 0 0 auto; /* Prevent slides from stretching */
     width: 100%; /* Ensure slides occupy full width of container */
@@ -190,39 +190,6 @@ body {
 
 
 
-/* Media query for smaller screens */
-@media only screen and (min-width: 1100px) and (max-width: 1366px) {
-    .logo {
-        width: 15%; /* Reduce width of logo container */
-    }
-
-    .slideshow {
-        width: calc(85% - 20px); /* Adjust width of slideshow container */
-    }
-}
-
-/* Media query for even smaller screens */
-@media only screen and (min-width: 500px) and (max-width: 1100px)  {
-    .top-container {
-        height: auto; /* Allow the top container to adjust its height */
-    }
-
-    .logo {
-        position: static; /* Reset position of logo container */
-        width: 10%; /* Make logo container full width */
-        max-width: none; /* Remove maximum width */
-    }
-
-    .slideshow {
-    	height: 300px;
-    	 width: calc(100%  - 20px);
-    /*
-        width: 100%; /* Make slideshow container full width */
-     /*   max-width: none;  */ /* Remove maximum width */
-
-
-    }
-}
 
 
 
@@ -289,12 +256,18 @@ body {
 
 
 
-/*/* Media query for smaller screens */
-@media only screen and (max-width: 800px) {
-    .middle-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -325,18 +298,18 @@ body {
     align-items: center;
 }
 
-/* .footer > h2 {
+/*.footer > h2 {
     text-align: center;
     height: 20px;
     text-size-adjust: 20px;
     color: black;
 
-}  */
+} */
 
 /* Social Media Icons Styles */
 .social-media-icons a {
-    margin-left: 15px; /* Adjust spacing between icons */
-    margin-right: 15px
+    margin-left: 50px; /* Adjust spacing between icons */*/
+    margin-right: 15px;
 
 }
 
@@ -352,3 +325,107 @@ body {
 /***********************************************************************
  *  Green Background
  **********************************************************************/
+
+
+
+/* Media query for smaller screens */
+@media only screen and (min-width: 1100px) and (max-width: 1366px) {
+    .logo {
+        width: 15%; /* Reduce width of logo container */
+    }
+
+    .slideshow {
+        width: calc(85% - 20px); /* Adjust width of slideshow container */
+    }
+}
+
+/* Media query for even smaller screens */
+@media only screen and (min-width: 500px) and (max-width: 1100px)  {
+    .top-container {
+        background-color: white;
+        height: auto; /* Allow the top container to adjust its height */
+    }
+
+    .logo {
+        position: static; /* Reset position of logo container */
+        width: 10%; /* Make logo container full width */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .slideshow {
+        height: 300px;
+         width: calc(100%  - 20px);
+    /*
+        width: 100%; /* Make slideshow container full width */
+     /*   max-width: none;  */ /* Remove maximum width */
+
+
+    }
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px)  {
+    .top-container {
+        background-color: white;
+        height: auto; /* Allow the top container to adjust its height */
+    }
+
+    .logo {
+        position: static; /* Reset position of logo container */
+        width: 10%; /* Make logo container full width */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .slideshow {
+        background-color: white;
+        height: auto;
+         width: calc(100%  - 20px);
+    /*
+        width: 100%; /* Make slideshow container full width */
+     /*   max-width: none;  */ /* Remove maximum width */
+
+
+    }
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 300px)  {
+    .top-container {
+        height: auto; /* Allow the top container to adjust its height */
+    }
+
+    .logo {
+        position: static; /* Reset position of logo container */
+        width: 10%; /* Make logo container full width */
+        max-width: none; /* Remove maximum width */
+    }
+
+    .slideshow {
+        height: auto;
+         width: calc(100%  - 20px);
+    /*
+        width: 100%; /* Make slideshow container full width */
+     /*   max-width: none;  */ /* Remove maximum width */
+
+
+    }
+}
+
+
+
+/*/* Media query for smaller screens */
+
+
+@media only screen and (max-width: 800px) {
+    .middle-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
+    }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px)  {
+    .middle-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
+    }
+}
