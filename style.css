@@ -289,25 +289,12 @@ body {
 
 
 
-
-
-
-
-
-
-
 /*/* Media query for smaller screens */
 @media only screen and (max-width: 800px) {
     .middle-container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width for smaller screens */
     }
 }
-
-
-
-
-
-
 
 
 
@@ -334,7 +321,7 @@ body {
     display: flex;
     background-color: grey;
     height: 60px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
