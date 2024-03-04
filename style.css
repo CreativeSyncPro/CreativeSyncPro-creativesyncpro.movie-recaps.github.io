@@ -333,23 +333,23 @@ body {
 .footer {
     display: flex;
     background-color: grey;
-    height: 80px;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer > h2 {
+/* .footer > h2 {
     text-align: center;
     height: 20px;
     text-size-adjust: 20px;
     color: black;
 
-} 
+}  */
 
 /* Social Media Icons Styles */
 .social-media-icons a {
-    margin-left: 5px; /* Adjust spacing between icons */
-    margin-right: 25px
+    margin-left: 15px; /* Adjust spacing between icons */
+    margin-right: 15px
 
 }
 
