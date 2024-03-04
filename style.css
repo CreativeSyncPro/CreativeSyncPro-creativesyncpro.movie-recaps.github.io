@@ -80,10 +80,13 @@ body {
 /* Hide the images by default */
 .Slides {
     position: relative;
-    display: fl;
+   display: none;
     transition: transform 0.5s ease-in-out;
      flex: 0 0 auto; /* Prevent slides from stretching */
     width: 100%; /* Ensure slides occupy full width of container */
+}
+.active {
+    display: block;
 }
 
  /* Style the images */
