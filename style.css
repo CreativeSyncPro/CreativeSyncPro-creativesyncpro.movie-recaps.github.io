@@ -80,11 +80,18 @@ body {
 /* Hide the images by default */
 .Slides {
     position: relative;
-   display: none;
+    display: fl;
     transition: transform 0.5s ease-in-out;
      flex: 0 0 auto; /* Prevent slides from stretching */
     width: 100%; /* Ensure slides occupy full width of container */
 }
+
+/* Hide all slides by default */
+.Slides {
+    display: none;
+}
+
+/* Show the active slide */
 .active {
     display: block;
 }
@@ -320,10 +327,38 @@ body {
 
 
 
-.footer > h2 {
-	text-align: center;
+
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    background-color: grey;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.footer > h2 {
+    text-align: center;
+    height: 20px;
+    text-size-adjust: 20px;
+    color: black;
+
+} 
+
+/* Social Media Icons Styles */
+.social-media-icons a {
+    margin-left: 5px; /* Adjust spacing between icons */
+    margin-right: 25px
+
+}
+
+.social-media-icons img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+/*    margin-right: 100px;*/
+;
+}
 
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
